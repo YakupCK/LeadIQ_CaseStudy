@@ -23,9 +23,15 @@ public class Driver {
 			switch (browser) {
 				case "chrome":
 					WebDriverManager.chromedriver().setup();
-					ChromeOptions chromeOptions = new ChromeOptions();
-					chromeOptions.addExtensions(new File("leadiq.crx"));
-					driver = new ChromeDriver(chromeOptions);
+					ChromeOptions options = new ChromeOptions();
+					options.addExtensions(new File("leadiq.crx"));
+					driver = new ChromeDriver(options);
+					break;
+				case "chrome-headless":
+					WebDriverManager.chromedriver().setup();
+					ChromeOptions options2 = new ChromeOptions().setHeadless(true);
+					options2.addExtensions(new File("leadiq.crx"));
+					driver = new ChromeDriver(options2);
 					break;
 				case "firefox":
 					WebDriverManager.firefoxdriver().setup();

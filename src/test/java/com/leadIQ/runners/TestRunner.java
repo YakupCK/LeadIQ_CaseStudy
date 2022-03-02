@@ -13,8 +13,8 @@ import org.junit.runner.RunWith;
 				  "rerun:target/rerun.txt"},
 		features = "src/test/resources/features",
 		glue = "com/leadIQ/step_defs",
-//		dryRun = false,
-		dryRun = true,
+		dryRun = false,
+//		dryRun = true,
 		tags = "@wip"
 )
 

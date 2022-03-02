@@ -89,7 +89,7 @@ public class Utils {
 	//wait for a web element till has a specific text
 	public static void waitForText(WebElement element, String text){
 		try {
-			WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 6);
+			WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 8);
 			wait.until(ExpectedConditions.textToBePresentInElement(element,text));
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -130,6 +130,19 @@ public class Utils {
 			Thread.sleep(time);
 		} catch (Exception e) {
 			e.printStackTrace();
+		}
+	}
+
+	//switch to tab with title
+	public static void switchTabWithTitle(String title){
+		Set<String> windowHandles = Driver.getDriver().getWindowHandles();
+		for (String handle : windowHandles) {
+			Driver.getDriver().switchTo().window(handle);
+			staticWait(1);
+			if (Driver.getDriver().getTitle().equals(title)) {
+				switchToWindow(1);
+				break;
+			}
 		}
 	}
 

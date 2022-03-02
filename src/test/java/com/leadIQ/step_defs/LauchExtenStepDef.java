@@ -8,6 +8,7 @@ import org.sikuli.script.FindFailed;
 
 public class LauchExtenStepDef {
 
+
 	private ChromeExtensPage chromeExtensPage = new ChromeExtensPage();
 	private ExtensLoginPage extensLoginPage = new ExtensLoginPage();
 
@@ -26,10 +27,9 @@ public class LauchExtenStepDef {
 		extensLoginPage.login();
 	}
 
-	@Then("Select a campaign is displayed in the campaign dropdown")
-	public void is_displayed_in_the_campaign_dropdown() {
-		extensLoginPage.verifySelectCampaignDisplayed();
+	@Then("Create New is displayed in the campaign dropdown")
+	public void Create_New_is_displayed_in_the_campaign_dropdown() {
+		extensLoginPage.verifySelectCampaignOrCreateNewDisplayed();
 	}
-
 
 }

@@ -6,8 +6,7 @@ Feature: Launch the extension
     Then the extension should be launched
 
     When I login with valid credentials
-    Then Select a campaign is displayed in the campaign dropdown
-
+    Then Create New is displayed in the campaign dropdown
 
 
 #  Task - 3 Launch the LeadIQ app through Chrome Extension
