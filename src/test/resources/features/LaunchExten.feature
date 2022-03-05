@@ -1,10 +1,10 @@
 Feature: Launch the extension
 
+  @wip
   Scenario: Verify leadIQ extension is successfully launched
     Given I initiate the driver
     When I launch the leadIQ extension
     Then the extension should be launched
-
     When I login with valid credentials
     Then Create New is displayed in the campaign dropdown
 

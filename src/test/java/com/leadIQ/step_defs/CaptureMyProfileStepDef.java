@@ -7,6 +7,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
 
@@ -26,6 +28,7 @@ public class CaptureMyProfileStepDef {
 		extensHomePage.clickSeeExample();
 		extensionWindowHandle = extensHomePage.getWindowHandle();
 		System.out.println("extensionWindowHandle" + extensionWindowHandle);
+
 	}
 
 	@And("I login to Linkedln with valid credentials")

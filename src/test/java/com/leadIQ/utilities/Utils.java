@@ -96,28 +96,6 @@ public class Utils {
 		}
 	}
 
-	//click on a web element using JSexecutor
-	public static void clickWithJSExe(WebElement element) {
-		waitClickability(element,3);
-		((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", element);
-	}
-
-	//attempt to click on a web element a couple of times
-	public static void clickManyTimes(WebElement element) {
-		waitClickability(element,3);
-		for (int i = 0; i < 3; i++) {
-			try {
-				element.click();
-			} catch (Exception e) {
-				e.printStackTrace();
-				try {
-					Thread.sleep(1000);
-				} catch (Exception ee) {
-					ee.printStackTrace();
-				}
-			}
-		}
-	}
 
 	//open a new tab using JSexecutor
 	public static void openNewTab(){
@@ -145,6 +123,7 @@ public class Utils {
 			}
 		}
 	}
+
 
 
 

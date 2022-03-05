@@ -1,5 +1,6 @@
 Feature: Launch the extension
 
+  @wip
   Scenario: Verify leadIQ extension is successfully launched
     Given I initiate the driver
     And I launch the leadIQ extension
