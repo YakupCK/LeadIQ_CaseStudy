@@ -69,9 +69,10 @@
                     <parallel>methods</parallel>
                     <useUnlimitedThreads>true</useUnlimitedThreads>
                     <testFailureIgnore>true</testFailureIgnore>
-                    <runOrder>Alphabetical</runOrder>
+                    <runOrder>reversealphabetical</runOrder>
                     <includes>
-                        <include>**/*CukesRunner.java</include>
+                        <include>**/*TestRunner.java</include>
+                        <include>**/*FailedTestRunner.java</include>
                     </includes>
                 </configuration>
             </plugin>
